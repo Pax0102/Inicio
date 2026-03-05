@@ -49,6 +49,7 @@ header{
     display:flex;
     gap:4px;
     padding:4px;
+    z-index:9999;
 }
 
 .link{
@@ -67,6 +68,7 @@ header{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+    z-index:9999;
 }
 
 .label{
@@ -77,20 +79,24 @@ header{
     opacity:0;
     white-space:nowrap;
     font-size:13px;
+    z-index:9999;
 }
 
 /* ===== HOVER MENU ===== */
 .link:hover{
     width:110px;
     background:rgba(255,255,255,0.08);
+    z-index:9999;
 }
 
 .link:hover .icon{
     left:22px;
+    z-index:9999;
 }
 
 .link:hover .label{
     opacity:1;
+    z-index:9999;
 }
 
 /* ===== ACTIVE (HOME DESTACADO) ===== */
@@ -98,15 +104,18 @@ header{
     width:110px;
     background:rgba(59,130,246,0.25);
     box-shadow:0 0 12px rgba(59,130,246,0.5);
+    z-index:9999;
 }
 
 .link.active .icon{
     left:22px;
+    z-index:9999;
 }
 
 .link.active .label{
     opacity:1;
     color:#3b82f6;
+    z-index:9999;
 }
 
 /* ===== CARDS ===== */
@@ -282,6 +291,24 @@ footer{
             <h2>Crazy Shark</h2>
             <div class="separator">Informações</div>
             <p>Crazy Shark, Tubarao, Aventura, Evolutivo</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/hardgame2.webp">
+        <div class="card-content">
+            <h2>The Worlds Hardest Game 2</h2>
+            <div class="separator">Informações</div>
+            <p>The Worlds Hardest Game 2, Dificil, Paciencia, Levels</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://pub-c77eb84ebd5c408aa81bb7f3302cac57.r2.dev/attached_assets/game_icons/Drive%20Mad.webp">
+        <div class="card-content">
+            <h2>Drive Mad</h2>
+            <div class="separator">Informações</div>
+            <p>Drive Mad, Carro, Divertido, Levels</p>
         </div>
     </div>
 
