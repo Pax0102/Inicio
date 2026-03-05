@@ -6,51 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-footer{
-    background:rgba(12,12,12,0.85);
-    backdrop-filter:blur(10px);
-    border-top:3px solid #3b82f6;
-    margin-top:40px;
-}
-
-.footer-container{
-    max-width:1400px;
-    margin:auto;
-    padding:25px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-.footer-text{
-    color:#9ca3af;
-    font-size:14px;
-}
-
-.footer-links{
-    display:flex;
-    gap:20px;
-}
-
-.footer-links a{
-    color:#d4d4d8;
-    text-decoration:none;
-    font-size:14px;
-    transition:0.2s;
-}
-
-.footer-links a:hover{
-    color:#3b82f6;
-}
-
+/* ===== BODY E RESET ===== */
 body{
     margin:0;
     background:linear-gradient(145deg,#0f0f0f,#1a1a1a);
     font-family:Arial, sans-serif;
 }
 
+/* ===== HEADER ===== */
 header{
     background-color:#0c0c0cd3;
     height:120px;
@@ -74,6 +37,7 @@ header{
     margin:0;
 }
 
+/* ===== MENU FIXO ===== */
 .menu{
     position:fixed;
     top:15px;
@@ -115,6 +79,7 @@ header{
     font-size:13px;
 }
 
+/* ===== HOVER MENU ===== */
 .link:hover{
     width:110px;
     background:rgba(255,255,255,0.08);
@@ -128,6 +93,23 @@ header{
     opacity:1;
 }
 
+/* ===== ACTIVE (HOME DESTACADO) ===== */
+.link.active{
+    width:110px;
+    background:rgba(59,130,246,0.25);
+    box-shadow:0 0 12px rgba(59,130,246,0.5);
+}
+
+.link.active .icon{
+    left:22px;
+}
+
+.link.active .label{
+    opacity:1;
+    color:#3b82f6;
+}
+
+/* ===== CARDS ===== */
 .cards{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -140,20 +122,15 @@ header{
 .card{
     width:100%;
     height:300px;
-
     background:rgba(30,30,30,0.55);
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
-
     border-radius:20px;
     overflow:hidden;
-
     border:1px solid rgba(255,255,255,0.08);
-
     box-shadow:
         0 10px 35px rgba(0,0,0,0.6),
         inset 0 1px 0 rgba(255,255,255,0.05);
-
     transition:0.3s;
 }
 
@@ -175,6 +152,7 @@ header{
     color:#e4e4e7;
 }
 
+/* ===== SEPARADOR ===== */
 .separator{
     display:flex;
     align-items:center;
@@ -194,19 +172,50 @@ header{
 .separator::before{margin-right:10px;}
 .separator::after{margin-left:10px;}
 
+/* ===== FOOTER ===== */
+footer{
+    background:rgba(12,12,12,0.85);
+    backdrop-filter:blur(10px);
+    border-top:3px solid #3b82f6;
+    margin-top:40px;
+}
+
+.footer-container{
+    max-width:1400px;
+    margin:auto;
+    padding:25px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.footer-text{
+    color:#9ca3af;
+    font-size:14px;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a{
+    color:#d4d4d8;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.2s;
+}
+
+.footer-links a:hover{
+    color:#3b82f6;
+}
 </style>
 </head>
 
-<footer>
-    <div class="footer-container">
-    <div class="footer-text">
-    © 2026 Hugo's Hub • Todos os direitos reservados
-    </div>
-    </div>
-    </footer>
-
 <body>
 
+<!-- HEADER -->
 <header>
 <div>
 <h4 class="tituloInicio">Inicio</h4>
@@ -214,67 +223,78 @@ header{
 </div>
 </header>
 
+<!-- MENU FIXO -->
 <div class="menu">
-<a href="#" class="link">
-<div class="icon">🏠</div>
-<div class="label">Inicio</div>
-</a>
+    <a href="#" class="link active">
+        <div class="icon">🏠</div>
+        <div class="label">Inicio</div>
+    </a>
 
-<a href="#" class="link">
-<div class="icon">🔍</div>
-<div class="label">Procurar</div>
-</a>
+    <a href="#" class="link">
+        <div class="icon">🔍</div>
+        <div class="label">Procurar</div>
+    </a>
 
-<a href="#" class="link">
-<div class="icon">❤️</div>
-<div class="label">Favoritos</div>
-</a>
+    <a href="#" class="link">
+        <div class="icon">❤️</div>
+        <div class="label">Favoritos</div>
+    </a>
 
-<a href="#" class="link">
-<div class="icon">⚙️</div>
-<div class="label">Config</div>
-</a>
+    <a href="#" class="link">
+        <div class="icon">⚙️</div>
+        <div class="label">Config</div>
+    </a>
 </div>
 
+<!-- CARDS -->
 <div class="cards">
 
-<div class="card">
-<img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/1.6.webp">
-<div class="card-content">
-<h2>CS 1.6</h2>
-<div class="separator">Informações</div>
-<p>CS 1.6, Tiro, Luta, Armamento | Créditos: Guilherme</p>
-</div>
+    <div class="card">
+        <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/1.6.webp">
+        <div class="card-content">
+            <h2>CS 1.6</h2>
+            <div class="separator">Informações</div>
+            <p>CS 1.6, Tiro, Luta, Armamento | Créditos: Guilherme</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/img/Drift-Hunters-Pro.jpg">
+        <div class="card-content">
+            <h2>Drift Hunters</h2>
+            <div class="separator">Informações</div>
+            <p>Drift Hunters Pro, Drift, Carro, Dirigir</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/motox3mwinter.webp">
+        <div class="card-content">
+            <h2>Moto X3m Winter</h2>
+            <div class="separator">Informações</div>
+            <p>Moto X3m Winter, Moto, Classico, Divertido</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://escaperoad.io/cache/data/image/game/crazy-shark-eroad1-f250x250.webp">
+        <div class="card-content">
+            <h2>Crazy Shark</h2>
+            <div class="separator">Informações</div>
+            <p>Crazy Shark, Tubarao, Aventura, Evolutivo</p>
+        </div>
+    </div>
+
 </div>
 
-<div class="card">
-<img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/img/Drift-Hunters-Pro.jpg">
-<div class="card-content">
-<h2>Drift Hunters</h2>
-<div class="separator">Informações</div>
-<p>Drift Hunters Pro, Drift, Carro, Dirigir</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/motox3mwinter.webp">
-<div class="card-content">
-<h2>Moto X3m Winter</h2>
-<div class="separator">Informações</div>
-<p>Moto X3m Winter, Moto, Classico, Divertido</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://escaperoad.io/cache/data/image/game/crazy-shark-eroad1-f250x250.webp">
-<div class="card-content">
-<h2>Crazy Shark</h2>
-<div class="separator">Informações</div>
-<p>Crazy Shark, Tubarao, Aventura, Evolutivo</p>
-</div>
-</div>
-
-</div>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-text">
+        © 2026 Hugo's Hub • Todos os direitos reservados
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
