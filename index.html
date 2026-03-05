@@ -5,6 +5,18 @@
 <title>Hugo's hub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+header {
+    background-color: #111;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+
+
 body {
     margin: 0;
     height: 100vh;
@@ -12,11 +24,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+
+
 .tituloInicio2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: fixed;
-    left: 24%;
-    bottom: 87%;
+    left: 25%;
+    bottom: 90%;
     font-size: 2.5rem;
     text-shadow: 
     2px 2px 4px rgba(0,0,0,0.7),
@@ -33,6 +48,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
     position: fixed;
+    bottom: 91%;
     left: 50px;
     color: #d4d4d8;
 }
@@ -119,8 +135,12 @@ body {
 </style>
 </head>
 <body>
-    <h4 class="tituloInicio">Inicio</h4>
-    <h1 class="tituloInicio2">Bem vindo, Hugo's hub a sua disponibilidade</h1>
+    <header>
+        <div class="header-box">
+            <h4 class="tituloInicio">Inicio</h4>
+            <h1 class="tituloInicio2">Bem vindo, Hugo's hub a sua disponibilidade</h1>
+        </div>
+    </header>
 
 <div class="menu">
     <a href="#" class="link active">
