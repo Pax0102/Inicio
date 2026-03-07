@@ -30,21 +30,14 @@ header{background:#0c0c0cd3;height:120px;width:100%;display:flex;align-items:cen
 .link:hover .label,.link.active .label{opacity:1}
 .link.active .label{color:#3b82f6}
 
-/* CORREÇÃO: layout tipo Pinterest para empurrar só cards de baixo */
-.cards{
-column-count:4;
-column-gap:30px;
-padding:40px;
-max-width:1400px;
-margin:auto;
-}
+/* Layout em colunas independentes */
+.cards-container{display:flex;gap:30px;max-width:1400px;margin:auto;padding:40px;}
+.column{display:flex;flex-direction:column;gap:30px;flex:1;}
 
 .card-link,
 .card{
-display:inline-block;
+display:block;
 width:100%;
-margin-bottom:30px;
-break-inside:avoid;
 }
 
 .card{
@@ -125,8 +118,10 @@ footer{background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border-top:3px s
 <a href="https://pax0102.github.io/Config/" class="link"><div class="icon">⚙️</div><div class="label">Config</div></a>
 </div>
 
-<div class="cards">
+<div class="cards-container">
 
+<!-- Coluna 1 -->
+<div class="column">
 <a href="#" class="card-link">
 <div class="card">
 <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/1.6.webp">
@@ -138,6 +133,20 @@ footer{background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border-top:3px s
 </div>
 </a>
 
+<a href="#" class="card-link">
+<div class="card">
+<img src="https://escaperoad.io/cache/data/image/game/crazy-shark-eroad1-f250x250.webp">
+<div class="card-content">
+<h2>Crazy Shark</h2>
+<div class="separator">Informações</div>
+<p>Crazy Shark, Tubarao, Aventura, Evolutivo</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- Coluna 2 -->
+<div class="column">
 <a href="#" class="card-link">
 <div class="card">
 <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/img/Drift-Hunters-Pro.jpg">
@@ -166,17 +175,6 @@ footer{background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border-top:3px s
 
 <a href="#" class="card-link">
 <div class="card">
-<img src="https://escaperoad.io/cache/data/image/game/crazy-shark-eroad1-f250x250.webp">
-<div class="card-content">
-<h2>Crazy Shark</h2>
-<div class="separator">Informações</div>
-<p>Crazy Shark, Tubarao, Aventura, Evolutivo</p>
-</div>
-</div>
-</a>
-
-<a href="#" class="card-link">
-<div class="card">
 <img src="https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/hardgame2.webp">
 <div class="card-content">
 <h2>TWHG 2</h2>
@@ -185,7 +183,10 @@ footer{background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border-top:3px s
 </div>
 </div>
 </a>
+</div>
 
+<!-- Coluna 3 -->
+<div class="column">
 <a href="#" class="card-link">
 <div class="card">
 <img src="https://pub-c77eb84ebd5c408aa81bb7f3302cac57.r2.dev/attached_assets/game_icons/Drive%20Mad.webp">
@@ -207,6 +208,12 @@ footer{background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border-top:3px s
 </div>
 </div>
 </a>
+</div>
+
+<!-- Coluna 4 (vazia ou pode adicionar novos cards) -->
+<div class="column">
+<!-- Aqui podem entrar outros cards no futuro -->
+</div>
 
 </div>
 
