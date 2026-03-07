@@ -45,7 +45,8 @@ overflow:hidden;
 border:1px solid rgba(255,255,255,.08);
 box-shadow:0 10px 35px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05);
 transition:.3s;
-cursor:pointer
+cursor:pointer;
+position:relative;
 }
 
 .card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.8),0 0 20px rgba(59,130,246,.25)}
@@ -61,18 +62,27 @@ cursor:pointer
 /* menu animado */
 
 .moto-menu{
-max-height:0;
-overflow:hidden;
+position:absolute;
+left:0;
+right:0;
+top:100%;
 display:flex;
 flex-direction:column;
 gap:8px;
+padding:10px 20px;
+background:rgba(20,20,20,.95);
+border-radius:0 0 20px 20px;
+border-top:1px solid rgba(255,255,255,.08);
+opacity:0;
+transform:translateY(-10px);
+pointer-events:none;
 transition:.35s;
-padding:0 20px
 }
 
 .moto-menu.open{
-max-height:200px;
-padding-bottom:20px
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
 }
 
 .moto-option{
@@ -149,9 +159,9 @@ footer{background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border-top:3px s
 </div>
 
 <div class="moto-menu" id="motoMenu">
-<a href="#" class="moto-option">🎮 Moto-X3m</a>
-<a href="https://pax0102.github.io/Moto-X3m-Winter/" class="moto-option">🏆 Moto-X3m-Winter</a>
-<a href="#" class="moto-option">⭐ Moto-X3m-Spooky-Land</a>
+<a href="#" class="moto-option">🏍️ Moto-X3m</a>
+<a href="https://pax0102.github.io/Moto-X3m-Winter/" class="moto-option">🎄 Moto-X3m-Winter</a>
+<a href="#" class="moto-option">🎃 Moto-X3m-Spooky-Land</a>
 </div>
 </div>
 
